@@ -1,0 +1,15 @@
+services:
+    victoire_core.widget_sitemap_content_resolver:
+        parent: victoire_widget.base_widget_content_resolver
+        tags:
+            - { name: victoire_widget.widget_content_resolver, alias: Sitemap }
+
+    #alias to the entity
+    victoire.widget.sitemap:
+        class: Victoire\Widget\SitemapBundle\Entity\WidgetSitemap
+
+    #alias to the form
+    victoire.widget.form.sitemap:
+        class: Victoire\Widget\SitemapBundle\Form\WidgetSitemapType
+        tags:
+            - { name: form.type , alias: victoire_widget_form_sitemap }

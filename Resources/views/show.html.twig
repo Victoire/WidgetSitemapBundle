@@ -1,0 +1,28 @@
+{% extends 'VictoireCoreBundle:Widget:show.html.twig' %}
+
+{% block content %}
+
+<ol>
+    <li>
+    {{ vic_link({'linkType' : 'page', 'page' : rootPage, 'target' : '_parent' }, rootPage.name) }}
+    {% if rootPage.children %}
+    <ol>
+       {{ _self.pagesHierarchy(rootPage.children) }}
+    </ol>
+    {% endif %}
+    </li>
+</ol>
+{% endblock content %}
+
+{% macro pagesHierarchy(pagesList) %}
+{% for page in pagesList %}
+    <li>
+        {{ vic_link({'linkType' : 'page', 'page' : page, 'target' : '_parent' }, page.name) }}
+        {% if page.children %}
+            <ol>
+               {{ _self.pagesHierarchy(page.children) }}
+            </ol>
+        {% endif %}
+    </li>
+{% endfor %}
+{% endmacro %}

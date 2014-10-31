@@ -1,0 +1,11 @@
+victoire_core:
+    widgets:
+        Sitemap:
+            class: "Victoire\\Widget\\SitemapBundle\\Entity\\WidgetSitemap"
+            name: Sitemap
+            
+jms_translation:
+    configs:
+        victoire_sitemap_bundle:
+            dirs: ["@VictoireSitemapBundle"]
+            output_dir: "@VictoireSitemapBundle/Resources/translations"
