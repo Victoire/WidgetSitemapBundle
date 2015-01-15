@@ -3,6 +3,7 @@ namespace Victoire\Widget\SitemapBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Victoire\Bundle\WidgetBundle\Entity\Widget;
+use Victoire\Bundle\CoreBundle\Entity\View;
 
 /**
  * WidgetSitemap
