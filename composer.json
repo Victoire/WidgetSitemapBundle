@@ -1,5 +1,5 @@
 {
-    "name": "victoire/sitemap-widget",
+    "name": "appventus/sitemap-widget",
     "type": "symfony-bundle",
     "description": "Victoire DCMS Sitemap widget",
     "keywords": ["cms", "victoire", "Sitemap", "widget"],
