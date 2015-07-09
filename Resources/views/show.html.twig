@@ -1,23 +1,32 @@
 {% extends 'VictoireCoreBundle:Widget:show.html.twig' %}
 
 {% block content %}
-
+{% if rootPage %}
 <ol>
     <li>
-    {{ vic_link({'linkType' : 'page', 'page' : rootPage, 'target' : '_parent' }, rootPage.name) }}
-    {% if rootPage.children %}
-    <ol>
-       {{ _self.pagesHierarchy(rootPage.children) }}
-    </ol>
-    {% endif %}
+        <h4>
+            <a href="{{ path('victoire_core_page_show', {'url': rootPage.url}) }}" target="_parent">
+                {{ rootPage.name }}
+            </a>
+        </h4>
+        {% if rootPage.children %}
+        <ol>
+           {{ _self.pagesHierarchy(rootPage.children) }}
+        </ol>
+        {% endif %}
     </li>
 </ol>
+{% else %}
+    Veuillez choisir une page de départ pour créer le plan du site
+{% endif %}
 {% endblock content %}
 
 {% macro pagesHierarchy(pagesList) %}
 {% for page in pagesList %}
     <li>
-        {{ vic_link({'linkType' : 'page', 'page' : page, 'target' : '_parent' }, page.name) }}
+        <a href="{{ path('victoire_core_page_show', {'url': page.url}) }}" target="_parent">
+            {{ page.name }}
+        </a>
         {% if page.children %}
             <ol>
                {{ _self.pagesHierarchy(page.children) }}
