@@ -1,19 +1,19 @@
 <?php
+
 namespace Victoire\Widget\SitemapBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Victoire\Bundle\WidgetBundle\Entity\Widget;
 use Victoire\Bundle\CoreBundle\Entity\View;
+use Victoire\Bundle\WidgetBundle\Entity\Widget;
 
 /**
- * WidgetSitemap
+ * WidgetSitemap.
  *
  * @ORM\Table("vic_widget_sitemap")
  * @ORM\Entity
  */
 class WidgetSitemap extends Widget
 {
-
     /**
      * @ORM\ManyToOne(targetEntity="\Victoire\Bundle\PageBundle\Entity\BasePage", inversedBy="children", cascade={"persist"})
      * @ORM\JoinColumn(name="root_page", referencedColumnName="id", onDelete="CASCADE")
@@ -29,18 +29,17 @@ class WidgetSitemap extends Widget
     /**
      * To String function
      * Used in render choices type (Especially in VictoireWidgetRenderBundle)
-     * //TODO Check the generated value and make it more consistent
+     * //TODO Check the generated value and make it more consistent.
      *
-     * @return String
+     * @return string
      */
     public function __toString()
     {
         return 'Sitemap #'.$this->id;
     }
 
-
     /**
-     * Set rootPage
+     * Set rootPage.
      *
      * @param string $rootPage
      */
@@ -52,7 +51,7 @@ class WidgetSitemap extends Widget
     }
 
     /**
-     * Get rootPage
+     * Get rootPage.
      *
      * @return string
      */
@@ -60,8 +59,10 @@ class WidgetSitemap extends Widget
     {
         return $this->rootPage;
     }
+
     /**
-     * Set children
+     * Set children.
+     *
      * @param string $children
      *
      * @return Page
@@ -77,7 +78,7 @@ class WidgetSitemap extends Widget
     }
 
     /**
-     * Get children
+     * Get children.
      *
      * @return string
      */
@@ -87,7 +88,7 @@ class WidgetSitemap extends Widget
     }
 
     /**
-     * Add child
+     * Add child.
      *
      * @param child $child
      */
@@ -97,7 +98,7 @@ class WidgetSitemap extends Widget
     }
 
     /**
-     * Remove child
+     * Remove child.
      *
      * @param child $child
      */
@@ -105,5 +106,4 @@ class WidgetSitemap extends Widget
     {
         $this->children->remove($child);
     }
-
 }
