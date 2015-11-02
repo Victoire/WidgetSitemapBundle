@@ -9,6 +9,7 @@ use Victoire\Bundle\CoreBundle\Form\WidgetType;
 /**
  * WidgetSitemap form type.
  */
+
 class WidgetSitemapType extends WidgetType
 {
     /**
@@ -22,6 +23,7 @@ class WidgetSitemapType extends WidgetType
     {
         $builder->add('rootPage', null, [
             'label' => 'widget_sitemap.form.rootPage.label',
+            'attr'  => ['placeholder' => 'widget_sitemap.form.rootPage.placeholder'],
         ]);
         parent::buildForm($builder, $options);
     }

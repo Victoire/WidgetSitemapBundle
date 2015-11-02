@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
-  <file date="2013-11-27T18:15:06Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
+  <file date="2013-11-27T18:15:06Z" source-language="en" target-language="es" datatype="plaintext" original="not.available">
     <header>
       <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
@@ -8,19 +8,19 @@
     <body>
       <trans-unit resname="widget.sitemap.new.action.label">
         <source>widget.sitemap.new.action.label</source>
-        <target state="new">Plan du site</target>
+        <target state="new">Mapa del sitio</target>
       </trans-unit>
       <trans-unit resname="modal.form.widget.type.sitemap.label">
         <source>modal.form.widget.type.sitemap.label</source>
-        <target state="new">Plan du site</target>
+        <target state="new">Mapa del sitio</target>
       </trans-unit>
       <trans-unit resname="widget_sitemap.form.rootPage.label">
         <source>widget_sitemap.form.rootPage.label</source>
-        <target state="new">Page racine</target>
+        <target state="new">Página raíz</target>
       </trans-unit>
       <trans-unit resname="widget_sitemap.form.rootPage.placeholder">
         <source>widget_sitemap.form.rootPage.placeholder</source>
-        <target state="new">Sélectionner une page</target>
+        <target state="new">Seleccione una página</target>
       </trans-unit>
     </body>
   </file>
