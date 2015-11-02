@@ -9,7 +9,6 @@ use Victoire\Bundle\CoreBundle\Form\WidgetType;
 /**
  * WidgetSitemap form type.
  */
-
 class WidgetSitemapType extends WidgetType
 {
     /**
