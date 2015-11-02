@@ -2,19 +2,20 @@
     "name": "friendsofvictoire/sitemap-widget",
     "type": "symfony-bundle",
     "description": "Victoire DCMS Sitemap widget",
-    "keywords": ["cms", "victoire", "Sitemap", "widget"],
-    "homepage": "http://appventus.com",
+    "keywords": ["DCMS", "Victoire", "widget", "FriendsofVictoire", "Dynamic", "CMS", "FoV", "SiteMap"],
+    "homepage": "http://victoire.io",
     "license": "MIT",
     "authors": [
         {
             "name": "Leny BERNARD",
-            "email": "leny@appventus.com"
+            "email": "leny@victoire.io"
         }
     ],
     "require": {
         "php"                      : ">=5.3.3",
         "symfony/framework-bundle" : "~2.3",
-        "victoire/victoire"        : "dev-master"    },
+        "victoire/victoire"        : "~1.3.0"
+    },
     "autoload": {
         "psr-0": { "Victoire\\Widget\\SitemapBundle": "" }
     },
