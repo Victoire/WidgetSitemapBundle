@@ -1,24 +1,40 @@
 {
-    "name": "friendsofvictoire/sitemap-widget",
-    "type": "symfony-bundle",
-    "description": "Victoire DCMS Sitemap widget",
-    "keywords": ["DCMS", "Victoire", "widget", "FriendsofVictoire", "Dynamic", "CMS", "FoV", "SiteMap"],
-    "homepage": "http://victoire.io",
-    "license": "MIT",
-    "authors": [
+    "name"             : "friendsofvictoire/sitemap-widget",
+    "type"             : "symfony-bundle",
+    "description"      : "Victoire DCMS Sitemap widget",
+    "keywords"         : [
+        "DCMS",
+        "Victoire",
+        "widget",
+        "FriendsofVictoire",
+        "Dynamic",
+        "CMS",
+        "FoV",
+        "SiteMap"
+    ],
+    "homepage"         : "http://victoire.io",
+    "license"          : "MIT",
+    "authors"          : [
         {
-            "name": "Leny BERNARD",
+            "name" : "Leny BERNARD",
             "email": "leny@victoire.io"
         }
     ],
-    "require": {
-        "php"                      : ">=5.3.3",
-        "symfony/framework-bundle" : "~2.3",
-        "victoire/victoire"        : "~1.3.0"
+    "require"          : {
+        "php"                     : ">=5.3.3",
+        "symfony/framework-bundle": "~2.3",
+        "victoire/victoire"       : "~1.3.0"
     },
-    "autoload": {
-        "psr-0": { "Victoire\\Widget\\SitemapBundle": "" }
+    "autoload"         : {
+        "psr-0": {
+            "Victoire\\Widget\\SitemapBundle": ""
+        }
     },
     "minimum-stability": "dev",
-    "target-dir": "Victoire/Widget/SitemapBundle"
+    "target-dir"       : "Victoire/Widget/SitemapBundle",
+    "extra"            : {
+        "branch-alias": {
+            "dev-master": "1.3.x-dev"
+        }
+    }
 }
