@@ -27,6 +27,11 @@ class WidgetSitemap extends Widget
     protected $children;
 
     /**
+     * @ORM\Column(name="depth", type="integer", nullable=true)
+     */
+    protected $depth;
+
+    /**
      * To String function
      * Used in render choices type (Especially in VictoireWidgetRenderBundle)
      *
@@ -104,5 +109,21 @@ class WidgetSitemap extends Widget
     public function removeChild(View $child)
     {
         $this->children->remove($child);
+    }
+
+    /**
+     * @return int
+     */
+    public function getDepth()
+    {
+        return $this->depth;
+    }
+
+    /**
+     * @param int $depth
+     */
+    public function setDepth($depth)
+    {
+        $this->depth = $depth;
     }
 }

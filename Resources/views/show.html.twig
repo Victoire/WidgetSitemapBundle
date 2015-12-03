@@ -2,36 +2,34 @@
 
 {% block content %}
 {% if rootPage %}
-<ol>
+<ul class="depth-0">
     <li>
-        <h4>
-            <a href="{{ path('victoire_core_page_show', {'url': rootPageReference.url}) }}" target="_parent">
-                {{ rootPageReference.name }}
-            </a>
-        </h4>
+        <a class="h4" href="{{ path('victoire_core_page_show', {'url': rootPageReference.url}) }}" target="_parent">
+            {{ rootPageReference.name }}
+        </a>
 
-        {% if rootPageReference.children %}
-        <ol>
-           {{ _self.pagesHierarchy(rootPageReference.children) }}
-        </ol>
+        {% if rootPageReference.children and depth > 0 or depth is null %}
+        <ul class="depth-1">
+           {{ _self.pagesHierarchy(rootPageReference.children, depth, 1) }}
+        </ul>
         {% endif %}
     </li>
-</ol>
+</ul>
 {% else %}
-    Veuillez choisir une page de départ pour créer le plan du site
+    {{ ''|trans }}
 {% endif %}
 {% endblock content %}
 
-{% macro pagesHierarchy(pageReferences) %}
+{% macro pagesHierarchy(pageReferences, depth, currentDepth) %}
     {% for pageReference in pageReferences %}
         <li>
             <a href="{{ path('victoire_core_page_show', {'url': pageReference.url}) }}" target="_parent">
                 {{ pageReference.name }}
             </a>
-            {% if pageReference.children %}
-                <ol>
-                   {{ _self.pagesHierarchy(pageReference.children) }}
-                </ol>
+            {% if pageReference.children and depth > currentDepth or depth is null %}
+                <ul class="depth-{{ currentDepth + 1 }}">
+                   {{ _self.pagesHierarchy(pageReference.children, depth, currentDepth + 1) }}
+                </ul>
             {% endif %}
         </li>
     {% endfor %}

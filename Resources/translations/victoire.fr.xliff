@@ -8,19 +8,27 @@
     <body>
       <trans-unit resname="widget.sitemap.new.action.label">
         <source>widget.sitemap.new.action.label</source>
-        <target state="new">Plan du site</target>
+        <target>Plan du site</target>
       </trans-unit>
       <trans-unit resname="modal.form.widget.type.sitemap.label">
         <source>modal.form.widget.type.sitemap.label</source>
-        <target state="new">Plan du site</target>
+        <target>Plan du site</target>
       </trans-unit>
       <trans-unit resname="widget_sitemap.form.rootPage.label">
         <source>widget_sitemap.form.rootPage.label</source>
-        <target state="new">Page racine</target>
+        <target>Page racine</target>
       </trans-unit>
       <trans-unit resname="widget_sitemap.form.rootPage.placeholder">
         <source>widget_sitemap.form.rootPage.placeholder</source>
-        <target state="new">Sélectionner une page</target>
+        <target>Sélectionner une page</target>
+      </trans-unit>
+      <trans-unit resname="widget_sitemap.form.depth.label">
+        <source>widget_sitemap.form.depth.label</source>
+        <target>Niveau de profondeur</target>
+      </trans-unit>
+      <trans-unit resname="widget_sitemap.form.depth.placeholder">
+        <source>widget_sitemap.form.depth.placeholder</source>
+        <target>Cette valeur permet de spécifier combien de page enfant seront affichées dans la liste.</target>
       </trans-unit>
     </body>
   </file>

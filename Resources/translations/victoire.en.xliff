@@ -22,6 +22,14 @@
         <source>widget_sitemap.form.rootPage.placeholder</source>
         <target state="new">Select a page</target>
       </trans-unit>
+      <trans-unit resname="widget_sitemap.form.depth.label">
+        <source>widget_sitemap.form.depth.label</source>
+        <target>Depth</target>
+      </trans-unit>
+      <trans-unit resname="widget_sitemap.form.depth.placeholder">
+        <source>widget_sitemap.form.depth.placeholder</source>
+        <target>It defines the children number to display in the list. Let blank to avoid restriction.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
