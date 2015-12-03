@@ -5,13 +5,14 @@
 <ol>
     <li>
         <h4>
-            <a href="{{ path('victoire_core_page_show', {'url': rootPage.url}) }}" target="_parent">
-                {{ rootPage.name }}
+            <a href="{{ path('victoire_core_page_show', {'url': rootPageReference.url}) }}" target="_parent">
+                {{ rootPageReference.name }}
             </a>
         </h4>
-        {% if rootPage.children %}
+
+        {% if rootPageReference.children %}
         <ol>
-           {{ _self.pagesHierarchy(rootPage.children) }}
+           {{ _self.pagesHierarchy(rootPageReference.children) }}
         </ol>
         {% endif %}
     </li>
@@ -21,17 +22,17 @@
 {% endif %}
 {% endblock content %}
 
-{% macro pagesHierarchy(pagesList) %}
-{% for page in pagesList %}
-    <li>
-        <a href="{{ path('victoire_core_page_show', {'url': page.url}) }}" target="_parent">
-            {{ page.name }}
-        </a>
-        {% if page.children %}
-            <ol>
-               {{ _self.pagesHierarchy(page.children) }}
-            </ol>
-        {% endif %}
-    </li>
-{% endfor %}
+{% macro pagesHierarchy(pageReferences) %}
+    {% for pageReference in pageReferences %}
+        <li>
+            <a href="{{ path('victoire_core_page_show', {'url': pageReference.url}) }}" target="_parent">
+                {{ pageReference.name }}
+            </a>
+            {% if pageReference.children %}
+                <ol>
+                   {{ _self.pagesHierarchy(pageReference.children) }}
+                </ol>
+            {% endif %}
+        </li>
+    {% endfor %}
 {% endmacro %}
