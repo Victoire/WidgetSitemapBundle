@@ -26,7 +26,7 @@ class WidgetSitemapType extends WidgetType
         ])->add('depth', 'integer', [
             'label'    => 'widget_sitemap.form.depth.label',
             'attr'     => ['placeholder' => 'widget_sitemap.form.depth.placeholder'],
-            'required' => false
+            'required' => false,
         ]);
         parent::buildForm($builder, $options);
     }
