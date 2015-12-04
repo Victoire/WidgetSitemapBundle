@@ -2,7 +2,6 @@
 
 namespace Victoire\Widget\SitemapBundle\Resolver;
 
-use Victoire\Bundle\CoreBundle\Entity\WebViewInterface;
 use Victoire\Bundle\ViewReferenceBundle\Cache\Xml\ViewReferenceXmlCacheRepository;
 use Victoire\Bundle\WidgetBundle\Model\Widget;
 use Victoire\Bundle\WidgetBundle\Resolver\BaseWidgetContentResolver;
@@ -16,8 +15,9 @@ class WidgetSitemapContentResolver extends BaseWidgetContentResolver
     {
         $this->viewCacheRepository = $viewCacheRepository;
     }
+
     /**
-     * Get the static content of the widget
+     * Get the static content of the widget.
      *
      * @param WidgetSiteMap $widget
      *
