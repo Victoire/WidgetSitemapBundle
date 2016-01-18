@@ -2,18 +2,18 @@
 
 namespace Victoire\Widget\SitemapBundle\Resolver;
 
-use Victoire\Bundle\ViewReferenceBundle\Cache\Xml\ViewReferenceXmlCacheRepository;
+use Victoire\Bundle\ViewReferenceBundle\Connector\ViewReferenceRepository;
 use Victoire\Bundle\WidgetBundle\Model\Widget;
 use Victoire\Bundle\WidgetBundle\Resolver\BaseWidgetContentResolver;
 use Victoire\Widget\SitemapBundle\Entity\WidgetSitemap;
 
 class WidgetSitemapContentResolver extends BaseWidgetContentResolver
 {
-    private $viewCacheRepository;
+    private $viewReferenceRepository;
 
-    public function __construct(ViewReferenceXmlCacheRepository $viewCacheRepository)
+    public function __construct(ViewReferenceRepository $viewReferenceRepository)
     {
-        $this->viewCacheRepository = $viewCacheRepository;
+        $this->viewReferenceRepository = $viewReferenceRepository;
     }
 
     /**
@@ -26,7 +26,7 @@ class WidgetSitemapContentResolver extends BaseWidgetContentResolver
     public function getWidgetStaticContent(Widget $widget)
     {
         $parameters = parent::getWidgetStaticContent($widget);
-        $parameters['rootPageReference'] = $this->viewCacheRepository->getOneReferenceByParameters(
+        $parameters['rootPageReference'] = $this->viewReferenceRepository->getOneReferenceByParameters(
             ['viewId' => $widget->getRootPage()->getId()],
             true,
             true
