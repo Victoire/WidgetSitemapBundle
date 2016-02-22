@@ -2,8 +2,9 @@
 
 namespace Victoire\Widget\SitemapBundle\Form;
 
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 use Victoire\Bundle\CoreBundle\Form\WidgetType;
 
 /**
@@ -23,7 +24,7 @@ class WidgetSitemapType extends WidgetType
         $builder->add('rootPage', null, [
             'label' => 'widget_sitemap.form.rootPage.label',
             'attr'  => ['placeholder' => 'widget_sitemap.form.rootPage.placeholder'],
-        ])->add('depth', 'integer', [
+        ])->add('depth', IntegerType::class, [
             'label'    => 'widget_sitemap.form.depth.label',
             'attr'     => ['placeholder' => 'widget_sitemap.form.depth.placeholder'],
             'required' => false
@@ -32,28 +33,16 @@ class WidgetSitemapType extends WidgetType
     }
 
     /**
-     * bind form to WidgetSitemap entity.
-     *
-     * @param OptionsResolverInterface $resolver
+     * {@inheritdoc}
      */
-    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    public function configureOptions(OptionsResolver $resolver)
     {
-        parent::setDefaultOptions($resolver);
+        parent::configureOptions($resolver);
 
         $resolver->setDefaults([
             'data_class'         => 'Victoire\Widget\SitemapBundle\Entity\WidgetSitemap',
             'widget'             => 'Sitemap',
             'translation_domain' => 'victoire',
         ]);
-    }
-
-    /**
-     * get form name.
-     *
-     * @return string The form name
-     */
-    public function getName()
-    {
-        return 'victoire_widget_form_sitemap';
     }
 }
