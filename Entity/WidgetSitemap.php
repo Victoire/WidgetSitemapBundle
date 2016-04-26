@@ -15,16 +15,10 @@ use Victoire\Bundle\WidgetBundle\Entity\Widget;
 class WidgetSitemap extends Widget
 {
     /**
-     * @ORM\ManyToOne(targetEntity="\Victoire\Bundle\PageBundle\Entity\BasePage", inversedBy="children", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="\Victoire\Bundle\PageBundle\Entity\BasePage", cascade={"persist"})
      * @ORM\JoinColumn(name="root_page", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $rootPage;
-
-    /**
-     * @ORM\OneToMany(targetEntity="\Victoire\Bundle\PageBundle\Entity\BasePage", mappedBy="rootPage")
-     * @ORM\OrderBy({"lft" = "ASC"})
-     */
-    protected $children;
 
     /**
      * @ORM\Column(name="depth", type="integer", nullable=true)
@@ -62,53 +56,6 @@ class WidgetSitemap extends Widget
     public function getRootpage()
     {
         return $this->rootPage;
-    }
-
-    /**
-     * Set children.
-     *
-     * @param string $children
-     *
-     * @return Page
-     */
-    public function setChildren($children)
-    {
-        $this->children = $children;
-        foreach ($children as $child) {
-            $child->setParent($this);
-        }
-
-        return $this;
-    }
-
-    /**
-     * Get children.
-     *
-     * @return string
-     */
-    public function getChildren()
-    {
-        return $this->children;
-    }
-
-    /**
-     * Add child.
-     *
-     * @param child $child
-     */
-    public function addChild(View $child)
-    {
-        $this->children[] = $child;
-    }
-
-    /**
-     * Remove child.
-     *
-     * @param child $child
-     */
-    public function removeChild(View $child)
-    {
-        $this->children->remove($child);
     }
 
     /**
