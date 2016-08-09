@@ -3,6 +3,7 @@ services:
         class: Victoire\Widget\SitemapBundle\Resolver\WidgetSitemapContentResolver
         arguments:
             - @victoire_view_reference.repository
+            - @request_stack
         tags:
             - { name: victoire_widget.widget_content_resolver, alias: Sitemap }
 
