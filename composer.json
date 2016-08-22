@@ -7,7 +7,6 @@
         "Victoire",
         "widget",
         "FriendsofVictoire",
-        "FoV",
         "SiteMap"
     ],
     "license": "MIT",
@@ -20,18 +19,12 @@
     "require": {
         "php": ">=5.5.9",
         "symfony/framework-bundle": "~2.8|~3.0",
-        "victoire/victoire": "~1.5"
+        "victoire/victoire": ">=2.0.0"
     },
     "autoload": {
         "psr-0": {
             "Victoire\\Widget\\SitemapBundle": ""
         }
     },
-    "minimum-stability": "dev",
     "target-dir": "Victoire/Widget/SitemapBundle",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.5.x-dev"
-        }
-    }
 }
