@@ -26,5 +26,5 @@
             "Victoire\\Widget\\SitemapBundle": ""
         }
     },
-    "target-dir": "Victoire/Widget/SitemapBundle",
+    "target-dir": "Victoire/Widget/SitemapBundle"
 }
