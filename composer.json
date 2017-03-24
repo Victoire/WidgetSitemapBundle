@@ -1,5 +1,5 @@
 {
-    "name": "friendsofvictoire/sitemap-widget",
+    "name": "victoire/sitemap-widget",
     "type": "symfony-bundle",
     "description": "Victoire DCMS Sitemap widget",
     "keywords": [
