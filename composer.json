@@ -1,13 +1,11 @@
 {
     "name": "victoire/sitemap-widget",
     "type": "symfony-bundle",
-    "description": "Victoire DCMS Sitemap widget",
+    "description": "Victoire Sitemap widget",
     "keywords": [
-        "DCMS",
         "Victoire",
-        "widget",
-        "FriendsofVictoire",
-        "SiteMap"
+        "SiteMap",
+        "Widget"
     ],
     "license": "MIT",
     "authors": [
@@ -17,9 +15,7 @@
         }
     ],
     "require": {
-        "php": ">=5.5.9",
-        "symfony/framework-bundle": "~2.8|~3.0",
-        "victoire/victoire": ">=2.0.0"
+        "victoire/victoire": "~2.3 | ~3.0"
     },
     "autoload": {
         "psr-0": {
