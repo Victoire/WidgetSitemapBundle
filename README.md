@@ -9,7 +9,7 @@ This bundle gives you access to the *Site Map Widget*, with it you can set up a 
 
 ## Set Up Victoire
 
-If you haven't already, you can follow the steps to set up Victoire *[here](https://github.com/Victoire/victoire/blob/master/setup.md)*
+If you haven't already, you can follow the steps to set up Victoire *[here](https://github.com/Victoire/victoire/blob/master/doc/setup.md)*
 
 ## Install the bundle
 
