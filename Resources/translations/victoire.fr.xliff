@@ -6,27 +6,27 @@
       <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
     </header>
     <body>
-      <trans-unit resname="widget.sitemap.new.action.label">
+      <trans-unit resname="widget.sitemap.new.action.label" id="58e25b0c75c8c">
         <source>widget.sitemap.new.action.label</source>
         <target>Plan du site</target>
       </trans-unit>
-      <trans-unit resname="modal.form.widget.type.sitemap.label">
+      <trans-unit resname="modal.form.widget.type.sitemap.label" id="58e25b0c75ca0">
         <source>modal.form.widget.type.sitemap.label</source>
         <target>Plan du site</target>
       </trans-unit>
-      <trans-unit resname="widget_sitemap.form.rootPage.label">
+      <trans-unit resname="widget_sitemap.form.rootPage.label" id="58e25b0c75cb2">
         <source>widget_sitemap.form.rootPage.label</source>
         <target>Page racine</target>
       </trans-unit>
-      <trans-unit resname="widget_sitemap.form.rootPage.placeholder">
+      <trans-unit resname="widget_sitemap.form.rootPage.placeholder" id="58e25b0c75cdb">
         <source>widget_sitemap.form.rootPage.placeholder</source>
         <target>Sélectionner une page</target>
       </trans-unit>
-      <trans-unit resname="widget_sitemap.form.depth.label">
+      <trans-unit resname="widget_sitemap.form.depth.label" id="58e25b0c75cfc">
         <source>widget_sitemap.form.depth.label</source>
         <target>Niveau de profondeur</target>
       </trans-unit>
-      <trans-unit resname="widget_sitemap.form.depth.placeholder">
+      <trans-unit resname="widget_sitemap.form.depth.placeholder" id="58e25b0c75d17">
         <source>widget_sitemap.form.depth.placeholder</source>
         <target>Cette valeur permet de spécifier combien de page enfant seront affichées dans la liste.</target>
       </trans-unit>
