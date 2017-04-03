@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/Victoire/WidgetSitemapBundle.svg?style=shield)](https://circleci.com/gh/Victoire/WidgetSitemapBundle)
 
-Victoire DCMS Sitemap Bundle
+Victoire Sitemap Bundle
 ============
 
 ## What is the purpose of this bundle
@@ -13,7 +13,7 @@ If you haven't already, you can follow the steps to set up Victoire *[here](http
 
 ## Install the bundle
 
-    php composer.phar require friendsofvictoire/sitemap-widget
+    php composer.phar require victoire/sitemap-widget
 
 ### Reminder
 
