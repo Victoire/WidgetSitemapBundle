@@ -1,6 +1,7 @@
 {% extends 'VictoireCoreBundle:Widget:show.html.twig' %}
 
 {% block content %}
+{% import _self as _this %}
 {% if rootPage %}
 <ul class="depth-0">
     <li>
@@ -10,7 +11,7 @@
 
         {% if rootPageReference.children and depth > 0 or depth is null %}
         <ul class="depth-1">
-           {{ _self.pagesHierarchy(rootPageReference.children, depth, 1) }}
+           {{ _this.pagesHierarchy(rootPageReference.children, depth, 1) }}
         </ul>
         {% endif %}
     </li>
@@ -21,6 +22,7 @@
 {% endblock content %}
 
 {% macro pagesHierarchy(pageReferences, depth, currentDepth) %}
+    {% import _self as _this %}
     {% for pageReference in pageReferences %}
         <li>
             <a href="{{ path('victoire_core_page_show', {'url': pageReference.url}) }}" target="_parent">
@@ -28,7 +30,7 @@
             </a>
             {% if pageReference.children and depth > currentDepth or depth is null %}
                 <ul class="depth-{{ currentDepth + 1 }}">
-                   {{ _self.pagesHierarchy(pageReference.children, depth, currentDepth + 1) }}
+                   {{ _this.pagesHierarchy(pageReference.children, depth, currentDepth + 1) }}
                 </ul>
             {% endif %}
         </li>
